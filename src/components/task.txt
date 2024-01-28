@@ -1,0 +1,28 @@
+INPUT ALTERNATIVO: Ingresar jugadores individualmente
+    TABLA 
+        INPUT
+        ELIMINAR/EDITAR (ICONOS)
+    
+    + GUARDAR INFO EN UN ARRAY
+
+
+
+
+
+
+TESTING INPUT:
+
+colibri
+lucho
+fer
+Manu
+Nelson,
+Pulp,o
+Brian
+Santi Torres
+  
+Mati
+,
+Chaco
+Mariano
+

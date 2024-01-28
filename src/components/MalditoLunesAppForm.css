@@ -1,0 +1,19 @@
+.component-name {
+    color: rgb(215, 215, 215);
+    background-color: gray;
+}
+
+.section-formAndoutput {
+    display: flex;
+}
+.form {
+    display:grid;
+    max-width: fit-content;
+
+}
+
+.form-input-box {
+    width: 40vw;
+    height: 60vh;
+    resize: none;
+}
