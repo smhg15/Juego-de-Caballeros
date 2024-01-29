@@ -34,7 +34,7 @@ function MalditoLunesAppForm() {
     function handleEnterKey(event){
         if (event.key === 'Enter') {
             event.preventDefault()
-        if (event.target.value!='' && event.target.value.match('[a-zA-Z0-9]+')){
+        if (event.target.value!='' && event.target.value.match('[a-zA-Z0-9\u00f1\u00d1]+')){
             setPlayersOneXOneArray([...playersOneXOneArray, event.target.value]);
             event.target.value=''//sirve para limpiar el input
             setPlayersArray([])//sirve para limpiar el outputTeam mientras se cargan nuevos jugadores
@@ -44,13 +44,12 @@ function MalditoLunesAppForm() {
     function handleDeleteRow(e, index){
         playersOneXOneArray.splice(index,1)
         setPlayersOneXOneArray([...playersOneXOneArray])
-        console.log(playersOneXOneArray)
+        setPlayersArray([])
     }
     
   return (
     <>
-    <p className='component-name'> Component and css name: "Maldito Lunes App Form" </p>
-     <section className='section-formAndoutput'>  
+     <section className='section-formAndoutput'>
         <button 
         onClick={handlePlayersInput}>
             {formAllPlayersInput
@@ -80,6 +79,7 @@ function MalditoLunesAppForm() {
     <input 
         type="text"
         onKeyDown={(e) => handleEnterKey(e)}
+        pattern='[a-zA-Z0-9\u00f1\u00d1]'
     /> 
     </table>
         }
