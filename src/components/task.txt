@@ -5,6 +5,10 @@ INPUT ALTERNATIVO: Ingresar jugadores individualmente
     
     + GUARDAR INFO EN UN ARRAY
 
+EN OUTPUT:
+AÑADIR UN "IF NO VACIO" AL PRINCIPIO
+RESETEAR EL ARRAY AL FINAL
+
 
 
 

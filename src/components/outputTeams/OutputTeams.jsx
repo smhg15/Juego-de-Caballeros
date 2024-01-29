@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 import './OutputTeams.css'
 
 function OutputTeams({playersProp}){
-
+    
     const playersArray= playersProp
     let counterPlayer= 0 // contador para enumerar y distribuir los jugadores
     const team1=[] // equipo aleatorio 1 
