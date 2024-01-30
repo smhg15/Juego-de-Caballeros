@@ -5,9 +5,12 @@
 
 .section-formAndoutput {
     display: flex;
+    flex-direction: column;
+    width: 80vw;
 }
+
 .form {
-    display:grid;
+    display:inline-flex;
     max-width: fit-content;
 
 }

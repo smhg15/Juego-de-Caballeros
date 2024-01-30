@@ -17,9 +17,9 @@ function MalditoLunesAppForm() {
         playersListArray = playersListArray.filter(player => player.match('[a-zA-Z0-9]+'));
 
         // Guarda la lista de jugadores en el estado playerArray
-        if (playersListArray.length >=1)
-        {setPlayersArray(playersListArray)
-        setIsShuffled(true)}
+        
+        setPlayersArray(playersListArray)
+        setIsShuffled(true)
 
     }
     
@@ -55,16 +55,17 @@ function MalditoLunesAppForm() {
     }
     
   return (
-    <>
-     <section className='section-formAndoutput'>
-        <div className='form'>
+    <section className='section-formAndoutput'>
         <button 
-        onClick={handlePlayersInput}>
+        onClick={handlePlayersInput}
+        className='button'
+        >
             {formAllPlayersInput
             ?'... OR YOU CAN INSERT PLAYERS ONE X ONE'
             :'... OR YOU CAN INSERT PLAYER LIST'
-            }
+            }            
         </button>
+        <div className='form'>
         {formAllPlayersInput
         ?
         <textarea 
@@ -92,13 +93,16 @@ function MalditoLunesAppForm() {
     /> 
     </table>
         }
-        <button type='button'onClick={formAllPlayersInput?handleTextareaSubmit:handleOneXOneSubmit}>
-          {isShuffled?'shuffle again':'Make Teams'}
-        </button>
-        </div>
     <OutputTeams playersProp={playersArray}/>{/*se envía un array*/}
+        </div>
+        <button 
+        type='button'
+        onClick={formAllPlayersInput?handleTextareaSubmit:handleOneXOneSubmit} 
+        className='button'
+        >
+          {isShuffled?'shuffle again':'Make Teams'}
+        </button>    
     </section>
-    </>
   )
 }
 
