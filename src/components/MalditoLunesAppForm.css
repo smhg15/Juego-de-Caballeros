@@ -1,22 +1,23 @@
-.component-name {
-    color: rgb(215, 215, 215);
-    background-color: gray;
-}
+/*
+METHODOLOGY: BEM BASED STYLED (block-name__element-name_modifier-name_modifier-value)
+RESPONSIVE DESIGN METHOD: FLEX-BOX BASED
 
-.section-formAndoutput {
+*/
+/* LAYOUT (header + footer): 20VH; PAGE: 80VH */
+
+.section {
     display: flex;
     flex-direction: column;
-    width: 80vw;
 }
-
-.form {
-    display:inline-flex;
-    max-width: fit-content;
-
+.section__button {
+    height: 5vh;
 }
-
-.form-input-box {
-    width: 40vw;
-    height: 60vh;
+.section__textarea {
+    height: 70vh;
     resize: none;
 }
+.article {
+    height: 70vh;
+    overflow: scroll;
+}
+

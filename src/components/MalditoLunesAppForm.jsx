@@ -1,15 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import './MalditoLunesAppForm.css'
 import OutputTeams from './outputTeams/OutputTeams';
 
+const textareaPlaceholder= 'Copy and paste your players listname (each line is one player).\n\n\nExample:\n\nPlayer 1\nPlayer 2\nPlayer 3\nPlayer 4\nPlayer 5\nPlayer 6\nPlayer 7\nPlayer 8\nPlayer 9\nPlayer 10'
 function MalditoLunesAppForm() {
+
     const [isShuffled, setIsShuffled]=useState(false)
     const [formAllPlayersInput, setFormAllPlayersInput]=useState(true)
     const [playersArray, setPlayersArray]=useState([]) //
     const [playersOneXOneArray, setPlayersOneXOneArray]=useState([])// Only for OneXOneInput
-
+    const ref= useRef(null)
+    
     function handleTextareaSubmit() {
-        
+    
         const formJson_teamList = document.getElementById('teamList').value
         let playersListArray= formJson_teamList.replaceAll(',',';').split('\n')// array de elementos a partir de un bloque de texto. 1ª TRANSFORMACIÓN: eliminación de ',' y renglones vacíos
         
@@ -17,16 +20,18 @@ function MalditoLunesAppForm() {
         playersListArray = playersListArray.filter(player => player.match('[a-zA-Z0-9]+'));
 
         // Guarda la lista de jugadores en el estado playerArray
-        
         setPlayersArray(playersListArray)
         setIsShuffled(true)
+        ref.current.scrollIntoView({behavior: "smooth", block: "start"})
 
     }
     
     function handleOneXOneSubmit(){
         if (playersOneXOneArray.length >=1)
             {setPlayersArray([...playersOneXOneArray])
-            setIsShuffled(true)}
+            setIsShuffled(true)
+            ref.current.scrollIntoView({behavior: "smooth", block: "start"})
+        }
     }
 
     function handlePlayersInput(){
@@ -55,53 +60,54 @@ function MalditoLunesAppForm() {
     }
     
   return (
-    <section className='section-formAndoutput'>
+    <section className='section'>
         <button 
         onClick={handlePlayersInput}
-        className='button'
+        className='section__button'
         >
             {formAllPlayersInput
             ?'... OR YOU CAN INSERT PLAYERS ONE X ONE'
             :'... OR YOU CAN INSERT PLAYER LIST'
             }            
         </button>
-        <div className='form'>
         {formAllPlayersInput
         ?
         <textarea 
-            className='form-input-box' 
-            placeholder='insert players listname (one player x line without line spacing)'
+            placeholder={textareaPlaceholder}
             id="teamList"
+            className='section__textarea'
         />
         :
-        <table>
-        {playersOneXOneArray.map((player,index)=>(
-            <tr>
-            <td key={index}>
-            {index+1}- {player}
-            </td>
-            <td>
-                <button onClick={(e) => handleDeleteRow(e, index)}>Delete</button>
-            </td>
-        </tr>
-        ))}
-    <input 
-        type="text"
-        onKeyDown={(e) => handleEnterKey(e)}
-        pattern='[a-zA-Z0-9\u00f1\u00d1]'
-        placeholder='insert player and press "enter"'
-    /> 
-    </table>
+        <article className='article'>
+            <table className='article__table'>
+                <thead>Insert a player name and press "Enter"</thead>
+                    {playersOneXOneArray.map((player,index)=>(
+                    <tr key={index}>
+                        <td key={index}>
+                            {index+1}- {player}
+                        </td>
+                        <td>
+                            <button onClick={(e) => handleDeleteRow(e, index)}>Delete</button>
+                        </td>
+                    </tr>
+                    ))}
+            </table>
+            <input
+            type="text"
+            onKeyDown={(e) => handleEnterKey(e)}
+            maxLength='25'
+            /> 
+        </article>
         }
-    <OutputTeams playersProp={playersArray}/>{/*se envía un array*/}
-        </div>
         <button 
         type='button'
-        onClick={formAllPlayersInput?handleTextareaSubmit:handleOneXOneSubmit} 
-        className='button'
+        onClick={formAllPlayersInput?handleTextareaSubmit:handleOneXOneSubmit}
+        className='section__button'
+        ref={ref}
         >
           {isShuffled?'shuffle again':'Make Teams'}
         </button>    
+    <OutputTeams playersProp={playersArray}/>{/*se envía un array*/}
     </section>
   )
 }

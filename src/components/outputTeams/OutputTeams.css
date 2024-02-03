@@ -1,5 +1,4 @@
-.input-box {
-    width: 40vw;
-    height: 60vh;
+.section__textarea {
+    height: 80vh;
     resize: none;
 }

@@ -5,8 +5,9 @@ function App() {
 
   return (
     <>
-      <h1>Component name: "App"</h1>
+      <h1>App-h1: Juego de Caballeros (teams maker)</h1>
       <MalditoLunesAppForm/>
+      <footer>App-footer: Santi Torres Design & FreePlayerCodefy</footer>
     </>
   )
 }

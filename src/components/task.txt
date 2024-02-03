@@ -1,4 +1,20 @@
-subir la pag a 
+TASK
+STYLES
+    FLEXBOX AND BEM NOMENCLATURE
+EVENT TOUCH
+    DE INPUT A OUTPUT
+
+REACT REDUX (PARA FUTUROS RELEASES)
+
+
+BACKEND
+    CONEXIÓN FRONT-BACK-BASE-SERVIDOR
+
+
+ACCES-KEYS
+"Alt Gr" + "z": controla el salto de línea (visualmente). SOlo en ESP- US
+
+
 TESTING INPUT:
 
 colibri

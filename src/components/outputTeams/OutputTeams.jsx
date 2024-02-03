@@ -1,13 +1,18 @@
 import React from "react";
 import './OutputTeams.css'
 
+const teamNames =[
+    'El Horacio S.C.', 'Alto Team S.R.L.', 'Que mirá bobo F.C.', 'Cebollitas', 'Es Leviousa H.S.', 'La gran Cuca S.A.', 'Maldito Lunes F.C.', 'Aston Birra', 'El Rejunte', 'Norma Melanzana', 'Vevo Chancha', 'Okama boys'
+]
+
 function OutputTeams({playersProp}){
     
     const playersArray= playersProp
     let counterPlayer= 0 // contador para enumerar y distribuir los jugadores
     const team1=[] // equipo aleatorio 1 
     const team2=[] // equipo aleatorio 2
-    let outputStringified= '' // retorna los dos equipos en un bloque de texto
+    const headTable = teamNames.sort(() => { return Math.random() - 0.5 })
+    let outputStringified= '' // almacena los dos equipos en un bloque de texto
 
     // Reordena aleatoriamente el array
     playersArray.sort(() => { return Math.random() - 0.5 });
@@ -24,11 +29,14 @@ function OutputTeams({playersProp}){
         outputStringified=`TEAM 1:\n\n${team1.toString().replaceAll(',','\n')}\n\n\nTEAM 2:\n\n${team2.toString().replaceAll(',','\n')}`
 
 return(
+    <>
+    {teamNames[0]} vs {teamNames[1]}
     <textarea
-        className='output-box' 
         value={outputStringified}
         readOnly
+        className="section__textarea"
     />
+    </>
 )
 }
 
