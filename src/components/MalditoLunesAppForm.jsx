@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import './MalditoLunesAppForm.css'
 import OutputTeams from './outputTeams/OutputTeams';
+import TacticsDisplay from './outputTeams/tacticsDisplay/TacticsDisplay';
 
 const textareaPlaceholder= 'Copy and paste your players listname (each line is one player).\n\n\nExample:\n\nPlayer 1\nPlayer 2\nPlayer 3\nPlayer 4\nPlayer 5\nPlayer 6\nPlayer 7\nPlayer 8\nPlayer 9\nPlayer 10'
 function MalditoLunesAppForm() {

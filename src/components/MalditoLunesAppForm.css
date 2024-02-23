@@ -15,6 +15,7 @@ RESPONSIVE DESIGN METHOD: FLEX-BOX BASED
 .section__textarea {
     height: 70vh;
     resize: none;
+    background-color: transparent;
 }
 .article {
     height: 70vh;

@@ -1,14 +1,14 @@
-import { useState } from 'react'
+import React from 'react'
+import './App.css'
 import MalditoLunesAppForm from './components/MalditoLunesAppForm'
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <h1>App-h1: Juego de Caballeros (teams maker)</h1>
+    <div className="app">
+      <h1 className='title'>Juego de Caballeros<br/>(teams maker)</h1>
       <MalditoLunesAppForm/>
-      <footer>App-footer: Santi Torres Design & FreePlayerCodefy</footer>
-    </>
+      <footer>FreePlayerCodefy</footer>
+    </div>
   )
 }
 

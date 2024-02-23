@@ -1,0 +1,96 @@
+.wrapper{
+    display: grid;
+    height: 40vh;
+    width: 91vw;
+    margin: 2px;
+    border: 5px solid rgb(50, 87, 56);
+    border-radius: 2.5%;
+    background-image: url(../../../../assets/mediumFieldBlur.png);
+    background-size:91vw 40vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    grid-template:
+        ".  .   .   por .  .   ."
+        "def0 def1 def2 def3 def4 def5 def6" 
+        "med0 med1 med2 med3 med4 med5 med6" 
+        "del0 del1 del2 del3 del4 del5 del6"
+        /12vw 12vw 12vw 12vw 12vw 12vw 12vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.font{
+    font-weight: bold;
+    font-size: 1em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:black;
+
+}
+.por{
+    grid-area: por;
+}
+
+.def0{
+    grid-area: def0;
+}
+.def1{
+    grid-area: def1;
+}
+.def2{
+    grid-area: def2;
+}
+.def3{
+    grid-area: def3;
+}
+.def4{
+    grid-area: def4;
+}
+.def5{
+    grid-area: def5;
+}
+.def6{
+    grid-area: def6;
+}
+
+.med0{
+    grid-area: med0;
+}
+.med1{
+    grid-area: med1;
+}
+.med2{
+    grid-area: med2;
+}
+.med3{
+    grid-area: med3;
+}
+.med4{
+    grid-area: med4;
+}
+.med5{
+    grid-area: med5;
+}
+.med6{
+    grid-area: med6;
+}
+.del0{
+    grid-area: del0;
+}
+.del1{
+    grid-area: del1;
+}
+.del2{
+    grid-area: del2;
+}
+.del3{
+    grid-area: del3;
+}
+.del4{
+    grid-area: del4;
+}
+.del5{
+    grid-area: del5;
+}
+.del6{
+    grid-area: del6;
+}

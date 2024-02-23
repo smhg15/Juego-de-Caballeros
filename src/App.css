@@ -1,0 +1,12 @@
+.app{
+  background-color: rgb(195, 218, 202);
+}
+
+.title{
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color:#fafafa;
+  padding: 0;
+  text-align: center;
+
+}
