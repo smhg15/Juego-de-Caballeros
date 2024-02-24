@@ -18,11 +18,17 @@ function MalditoLunesAppForm() {
         
         // 2ª TRANSFORMACIÓN: quita los espacios en blanco y renglones que no incluyan al menos una letra o número
         playersListArray = playersListArray.filter(player => player.match('[a-zA-Z0-9]+'));
-
-        // Guarda la lista de jugadores en el estado playerArray
-        setPlayersArray(playersListArray)
-        setIsShuffled(true)
-        ref.current.scrollIntoView({behavior: "smooth", block: "start"})
+        const hasDuplicates = array => new Set(array).size < array.length
+        if (hasDuplicates(playersListArray) == true) {
+            alert("anotaste dos veces al mismo cabeza...¿querés que te consiga gente?")
+        }
+            
+        else {            
+            // Guarda la lista de jugadores en el estado playerArray
+            setPlayersArray(playersListArray)
+            setIsShuffled(true)
+            ref.current.scrollIntoView({behavior: "smooth", block: "start"})
+        }
 
     }
     
