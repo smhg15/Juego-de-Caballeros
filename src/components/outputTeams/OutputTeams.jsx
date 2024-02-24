@@ -29,15 +29,14 @@ function OutputTeams({playersProp}){
         outputStringified=`TEAM 1:\n\n${team1.toString().replaceAll(',','\n')}\n\n\nTEAM 2:\n\n${team2.toString().replaceAll(',','\n')}`
 
 return(
+    
+    (playersArray.length>=1 && playersArray.length<=9)?
+    alert('...te falta gente maestro...\n (debe ingresar al menos 10 jugadores)')
+    :
     <>
     <div className='teamVsTeam'>{teamNames[0]} vs {teamNames[1]}</div>
-    {/* <textarea
-        value={outputStringified}
-        readOnly
-        className="section__textarea"
-    /> */}
     <TacticsDisplay team={team1}/>
-    <TacticsDisplay team={team2}/>{/*rotar 180º en mobile con css*/}
+    <TacticsDisplay team={team2}/>
     </>
 )
 }

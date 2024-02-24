@@ -13,7 +13,7 @@ import Tactic11 from './tactics/Tactic11.jsx'
 
     switch(true){
 
-        case team.length==0:
+        case team.length==0 || team[0]=='':
             break
         case team.length==5:
             tactic= <Tactic5 players={team}/>
@@ -36,11 +36,8 @@ import Tactic11 from './tactics/Tactic11.jsx'
         case team.length==11:
             tactic= <Tactic11 players={team}/>
             break
-        case team.length>=12:
-            tactic= <><Tactic11 players={team}/>{alert(`${team[11]} hace el asado`)}</>
-            break
         default:
-            tactic= alert('...te falta gente maestro...\n (debe ingresar al menos 10 jugadores)')
+            tactic= <><Tactic11 players={team}/>{alert(`${team[11]} hace el asado`)}</>
             break
         
     }   
