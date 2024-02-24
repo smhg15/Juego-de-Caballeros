@@ -1,7 +1,6 @@
 import React, { useState, useRef } from 'react';
 import './MalditoLunesAppForm.css'
 import OutputTeams from './outputTeams/OutputTeams';
-import TacticsDisplay from './outputTeams/tacticsDisplay/TacticsDisplay';
 
 const textareaPlaceholder= 'Copy and paste your players listname (each line is one player).\n\n\nExample:\n\nPlayer 1\nPlayer 2\nPlayer 3\nPlayer 4\nPlayer 5\nPlayer 6\nPlayer 7\nPlayer 8\nPlayer 9\nPlayer 10'
 function MalditoLunesAppForm() {
@@ -64,11 +63,11 @@ function MalditoLunesAppForm() {
     <section className='section'>
         <button 
         onClick={handlePlayersInput}
-        className='section__button'
+        className='section__button font'
         >
             {formAllPlayersInput
-            ?'... OR YOU CAN INSERT PLAYERS ONE X ONE'
-            :'... OR YOU CAN INSERT PLAYER LIST'
+            ?'PRESS TO INSERT PLAYERS ONE X ONE'
+            :'PRESS TO INSERT PLAYERS LIST'
             }            
         </button>
         {formAllPlayersInput
@@ -76,19 +75,19 @@ function MalditoLunesAppForm() {
         <textarea 
             placeholder={textareaPlaceholder}
             id="teamList"
-            className='section__textarea'
+            className='section__textarea font' 
         />
         :
         <article className='article'>
             <table className='article__table'>
-                <thead>Insert a player name and press "Enter"</thead>
+                <thead className='font'>Insert a player name and press "Enter"</thead>
                     {playersOneXOneArray.map((player,index)=>(
                     <tr key={index}>
-                        <td key={index}>
+                        <td className= 'font' key={index}>
                             {index+1}- {player}
                         </td>
                         <td>
-                            <button onClick={(e) => handleDeleteRow(e, index)}>Delete</button>
+                            <button className='section__button font' onClick={(e) => handleDeleteRow(e, index)}>Delete</button>
                         </td>
                     </tr>
                     ))}
@@ -97,16 +96,17 @@ function MalditoLunesAppForm() {
             type="text"
             onKeyDown={(e) => handleEnterKey(e)}
             maxLength='25'
+            className='article__input'
             /> 
         </article>
         }
         <button 
         type='button'
         onClick={formAllPlayersInput?handleTextareaSubmit:handleOneXOneSubmit}
-        className='section__button'
+        className='section__button font'
         ref={ref}
         >
-          {isShuffled?'shuffle again':'Make Teams'}
+          {isShuffled?'SHUFFLE AGAIN':'MAKE TEAMS'}
         </button>    
     <OutputTeams playersProp={playersArray}/>{/*se envía un array*/}
     </section>

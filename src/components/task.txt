@@ -1,11 +1,15 @@
 TASK
-    tacticsDisplay
-        FLEXBOX
-        GRID (???)
-        Crear una función que devuelva 4 FILAS de elementos (la primera va a contener siempre 1)
+
 
 STYLES
     FLEXBOX AND BEM NOMENCLATURE
+    PALETA DE COLORES
+        #133954
+        #628290
+        #468902
+        #b1de00
+        #000000
+
 EVENT TOUCH
     DE INPUT A OUTPUT
 

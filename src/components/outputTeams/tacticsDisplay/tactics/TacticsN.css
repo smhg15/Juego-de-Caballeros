@@ -2,7 +2,6 @@
     display: grid;
     height: 40vh;
     width: 91vw;
-    margin: 2px;
     border: 5px solid rgb(50, 87, 56);
     border-radius: 2.5%;
     background-image: url(../../../../assets/mediumFieldBlur.png);
@@ -20,10 +19,9 @@
 }
 
 .font{
-    font-weight: bold;
     font-size: 1em;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color:black;
+    font-family:fantasy, Impact, 'Arial Narrow Bold', sans-serif;
+    color: #000000;
 
 }
 .por{

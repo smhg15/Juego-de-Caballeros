@@ -30,7 +30,7 @@ function OutputTeams({playersProp}){
 
 return(
     <>
-    {teamNames[0]} vs {teamNames[1]}
+    <div className='teamVsTeam'>{teamNames[0]} vs {teamNames[1]}</div>
     {/* <textarea
         value={outputStringified}
         readOnly

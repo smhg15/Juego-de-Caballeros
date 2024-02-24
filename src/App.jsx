@@ -4,10 +4,10 @@ import MalditoLunesAppForm from './components/MalditoLunesAppForm'
 function App() {
 
   return (
-    <div className="app">
-      <h1 className='title'>Juego de Caballeros<br/>(teams maker)</h1>
+    <div className='app'>
+      <h1 className='app__title'>Juego de Caballeros<br/>(teams maker)</h1>
       <MalditoLunesAppForm/>
-      <footer>FreePlayerCodefy</footer>
+      <footer className='app__footer'>#FreePlayerCodefy</footer>
     </div>
   )
 }

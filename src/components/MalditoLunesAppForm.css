@@ -5,20 +5,45 @@ RESPONSIVE DESIGN METHOD: FLEX-BOX BASED
 */
 /* LAYOUT (header + footer): 20VH; PAGE: 80VH */
 
+.font{
+    font-size: 1em;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:#000000;
+}
+
 .section {
     display: flex;
     flex-direction: column;
+    background-color: #628290;
+    padding: 2.5%;
 }
 .section__button {
-    height: 5vh;
+    height: contain;
+    background-color: #468902;
+
 }
 .section__textarea {
     height: 70vh;
     resize: none;
-    background-color: transparent;
+    margin: 1.5% 0 1.5% 0;
+    background-color: #628290;
+    border: transparent;
 }
+.section__textarea::placeholder {
+    color: #133954;
+};
+
 .article {
     height: 70vh;
     overflow: scroll;
 }
-
+.article__table{
+    width: 91vw;
+    background-color: #628290;
+    margin: 2.5% 0;
+}
+.article__input{
+    border: 2px solid #b1de00;
+    background-color: #fafafa;
+    margin-bottom: 2.5%;
+}
