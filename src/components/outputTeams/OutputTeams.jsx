@@ -30,7 +30,7 @@ function OutputTeams({playersProp}){
 
 return(
     
-    (playersArray.length>=1 && playersArray.length<=9)?
+    (playersProp.length>=1 && playersProp.length<=9)?
     alert('...te falta gente maestro...\n (debe ingresar al menos 10 jugadores)')
     :
     <>
