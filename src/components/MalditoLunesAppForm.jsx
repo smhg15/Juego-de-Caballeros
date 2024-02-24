@@ -14,22 +14,23 @@ function MalditoLunesAppForm() {
     function handleTextareaSubmit() {
     
         const formJson_teamList = document.getElementById('teamList').value
-        let playersListArray= formJson_teamList.replaceAll(',',';').split('\n')// array de elementos a partir de un bloque de texto. 1ª TRANSFORMACIÓN: eliminación de ',' y renglones vacíos
-        
-        // 2ª TRANSFORMACIÓN: quita los espacios en blanco y renglones que no incluyan al menos una letra o número
-        playersListArray = playersListArray.filter(player => player.match('[a-zA-Z0-9]+'));
-        const hasDuplicates = array => new Set(array).size < array.length
-        if (hasDuplicates(playersListArray) == true) {
-            alert("anotaste dos veces al mismo cabeza...¿querés que te consiga gente?")
-        }
+        if (formJson_teamList != '') {
+            let playersListArray= formJson_teamList.replaceAll(',',';').split('\n')// array de elementos a partir de un bloque de texto. 1ª TRANSFORMACIÓN: eliminación de ',' y renglones vacíos
             
-        else {            
-            // Guarda la lista de jugadores en el estado playerArray
-            setPlayersArray(playersListArray)
-            setIsShuffled(true)
-            ref.current.scrollIntoView({behavior: "smooth", block: "start"})
-        }
-
+            // 2ª TRANSFORMACIÓN: quita los espacios en blanco y renglones que no incluyan al menos una letra o número
+            playersListArray = playersListArray.filter(player => player.match('[a-zA-Z0-9]+'));
+            const hasDuplicates = array => new Set(array).size < array.length
+            if (hasDuplicates(playersListArray) == true) {
+                alert("anotaste dos veces al mismo cabeza...¿querés que te preste amigos?")
+            }
+                
+            else {            
+                // Guarda la lista de jugadores en el estado playerArray
+                setPlayersArray(playersListArray)
+                setIsShuffled(true)
+                ref.current.scrollIntoView({behavior: "smooth", block: "start"})
+            }
+        }  
     }
     
     function handleOneXOneSubmit(){
@@ -50,12 +51,18 @@ function MalditoLunesAppForm() {
     function handleEnterKey(event){
         if (event.key === 'Enter') {
             event.preventDefault()
-        if (event.target.value!='' && event.target.value.match('[a-zA-Z0-9\u00f1\u00d1]+')){
-            setPlayersOneXOneArray([...playersOneXOneArray, event.target.value]);
-            event.target.value=''//sirve para limpiar el input
-            setPlayersArray([])//sirve para limpiar el outputTeam mientras se cargan nuevos jugadores
-            setIsShuffled(false)
-        }
+        if (event.target.value!='' && event.target.value.match('[a-zA-Z0-9\u00f1\u00d1]+')) {
+
+            if (playersOneXOneArray.includes(event.target.value)==false){
+                setPlayersOneXOneArray([...playersOneXOneArray, event.target.value]);
+                event.target.value=''//sirve para limpiar el input
+                setPlayersArray([])//sirve para limpiar el outputTeam mientras se cargan nuevos jugadores
+                setIsShuffled(false)
+            }
+            else {
+                alert("a ese ya lo anotaste cabeza...¿viniste chupao?")
+            }
+        }  
       }
     };
     function handleDeleteRow(e, index){
@@ -86,7 +93,7 @@ function MalditoLunesAppForm() {
         :
         <article className='article'>
             <table className='article__table'>
-                <thead className='font'>Insert a player name and press "Enter"</thead>
+                <thead className='font'>Insert a player name and press "Enter" (debe contener al menos una letra o número)</thead>
                     {playersOneXOneArray.map((player,index)=>(
                     <tr key={index}>
                         <td className= 'font' key={index}>

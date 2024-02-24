@@ -3,7 +3,7 @@ import './OutputTeams.css'
 import TacticsDisplay from './tacticsDisplay/TacticsDisplay.jsx';
 
 const teamNames =[
-    'El Horacio S.C.', 'Tata F.C.', 'Alto Team S.R.L.', 'Que mirá bobo F.C.', 'Cebollitas', 'Es Leviousa H.S.', 'La gran Cuca S.A.', 'Maldito Lunes F.C.', 'Aston Birra', 'El Rejunte', 'Norma Melanzana', 'Vevo Chancha', 'Okama boys'
+    'El Horacio S.C.', 'Los pechera', 'Tata F.C.', 'Alto Team S.R.L.', 'Que mirá bobo F.C.', 'Cebollitas', 'Es Leviousa H.S.', 'La gran Cuca S.A.', 'Maldito Lunes F.C.', 'Aston Birra', 'El Rejunte', 'Norma Melanzana', 'Vevo Chancha', 'Okama boys'
 ]
 
 function OutputTeams({playersProp}){

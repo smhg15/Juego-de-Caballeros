@@ -16,10 +16,12 @@ RESPONSIVE DESIGN METHOD: FLEX-BOX BASED
     flex-direction: column;
     background-color: #628290;
     padding: 2.5%;
+    border-radius: 2.5%;
 }
 .section__button {
     height: contain;
     background-color: #468902;
+    border-radius: 2.5%;
 
 }
 .section__textarea {
@@ -40,7 +42,6 @@ RESPONSIVE DESIGN METHOD: FLEX-BOX BASED
 .article__table{
     width: 91vw;
     background-color: #628290;
-    margin: 2.5% 0;
 }
 .article__input{
     border: 2px solid #b1de00;
