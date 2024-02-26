@@ -1,7 +1,8 @@
 .teamVsTeam{
-    font-size: 1em;
+    background-color: #19191971;
+    font-size: 2em;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    color: #b1de00;
+    color: #ff0400;
     text-align: center;
-
+    -webkit-text-stroke: 1px #191919;
 }
