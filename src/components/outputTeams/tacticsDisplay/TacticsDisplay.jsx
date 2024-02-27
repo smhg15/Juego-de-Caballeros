@@ -6,8 +6,12 @@ import Tactic8 from './tactics/Tactic8.jsx'
 import Tactic9 from './tactics/Tactic9.jsx'
 import Tactic10 from './tactics/Tactic10.jsx'
 import Tactic11 from './tactics/Tactic11.jsx'
- function TacticsDisplay({team}){
+import languages from '../../../languages.jsx'
 
+
+function TacticsDisplay({team}){
+    
+    const lang= languages().tacticsDisplay
     
     let tactic = <></>
 
@@ -37,7 +41,7 @@ import Tactic11 from './tactics/Tactic11.jsx'
             tactic= <Tactic11 players={team}/>
             break
         default:
-            tactic= <><Tactic11 players={team}/>{alert(`${team[11]} hace el asado`)}</>
+            tactic= <><Tactic11 players={team}/>{alert(`${team[11]} ${lang.defaultAlert}`)}</>
             break
         
     }   

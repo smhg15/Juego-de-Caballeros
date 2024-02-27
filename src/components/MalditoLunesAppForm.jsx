@@ -1,10 +1,13 @@
 import React, { useState, useRef } from 'react';
 import './MalditoLunesAppForm.css'
 import OutputTeams from './outputTeams/OutputTeams';
+import languages from '../languages'
 
-const textareaPlaceholder= 'Copy and paste your players listname (each line is one player).\n\n\nExample:\n\nPlayer 1\nPlayer 2\nPlayer 3\nPlayer 4\nPlayer 5\nPlayer 6\nPlayer 7\nPlayer 8\nPlayer 9\nPlayer 10'
+
+
 function MalditoLunesAppForm() {
-
+    
+    const lang = languages().malditoLunesAppForm
     const [isShuffled, setIsShuffled]=useState(false)
     const [formAllPlayersInput, setFormAllPlayersInput]=useState(true)
     const [playersArray, setPlayersArray]=useState([]) //
@@ -12,6 +15,7 @@ function MalditoLunesAppForm() {
     const ref= useRef(null)
     
     function handleTextareaSubmit() {
+
     
         const formJson_teamList = document.getElementById('teamList').value
         if (formJson_teamList != '') {
@@ -20,8 +24,11 @@ function MalditoLunesAppForm() {
             // 2ª TRANSFORMACIÓN: quita los espacios en blanco y renglones que no incluyan al menos una letra o número
             playersListArray = playersListArray.filter(player => player.match('[a-zA-Z0-9]+'));
             const hasDuplicates = array => new Set(array).size < array.length
-            if (hasDuplicates(playersListArray) == true) {
-                alert("anotaste dos veces al mismo cabeza...¿querés que te preste amigos?")
+            if (playersListArray.length <10) {
+                alert(lang.incompleteTeamAlert)
+            }
+            else if (hasDuplicates(playersListArray) == true) {
+                alert(lang.textareaAlertDuplicated)
             }
                 
             else {            
@@ -60,7 +67,7 @@ function MalditoLunesAppForm() {
                 setIsShuffled(false)
             }
             else {
-                alert("a ese ya lo anotaste cabeza...¿viniste chupao?")
+                alert(lang.oneXOneInputAlertDuplicated)
             }
         }  
       }
@@ -79,21 +86,21 @@ function MalditoLunesAppForm() {
         className='section__button font'
         >
             {formAllPlayersInput
-            ?'PRESS TO INSERT PLAYERS ONE X ONE'
-            :'PRESS TO INSERT PLAYERS LIST'
+            ? lang.inputPlayersButton.toOneXOneInput
+            : lang.inputPlayersButton.toListForm
             }            
         </button>
         {formAllPlayersInput
         ?
         <textarea 
-            placeholder={textareaPlaceholder}
+            placeholder={lang.textareaPlaceholder}
             id="teamList"
             className='section__textarea font' 
         />
         :
         <article className='article'>
             <table className='article__table'>
-                <thead className='font'>Insert a player name and press "Enter" (debe contener al menos una letra o número)</thead>
+                <thead className='font'>{lang.oneXOneInputTableHead}</thead>
                     {playersOneXOneArray.map((player,index)=>(
                     <tr key={index}>
                         <td className= 'font' key={index}>
@@ -119,7 +126,7 @@ function MalditoLunesAppForm() {
         className='section__button font'
         ref={ref}
         >
-          {isShuffled?'SHUFFLE AGAIN':'MAKE TEAMS'}
+          {isShuffled? lang.makeTeamButton.isShuffled:lang.makeTeamButton.isNotShuffled}
         </button>    
     <OutputTeams playersProp={playersArray}/>{/*se envía un array*/}
     </section>
