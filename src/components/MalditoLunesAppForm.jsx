@@ -41,8 +41,11 @@ function MalditoLunesAppForm() {
     }
     
     function handleOneXOneSubmit(){
-        if (playersOneXOneArray.length >=1)
-            {setPlayersArray([...playersOneXOneArray])
+        if (playersOneXOneArray.length <10) {
+            alert(lang.incompleteTeamAlert)
+        }
+        else {
+            setPlayersArray([...playersOneXOneArray])
             setIsShuffled(true)
             ref.current.scrollIntoView({behavior: "smooth", block: "start"})
         }

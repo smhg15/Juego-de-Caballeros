@@ -61,7 +61,7 @@ else {
             h1:'(Team Maker)',
         },
         malditoLunesAppForm:{
-            incompleteTeamAlert:'The playerslist must contain at least 10 players',
+            incompleteTeamAlert:'The players list must contain at least 10 players',
             textareaAlertDuplicated:'There are at least two players with the same name.',
             oneXOneInputAlertDuplicated:'This player has already been added to the list.',
             inputPlayersButton:{
