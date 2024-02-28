@@ -3,15 +3,13 @@ import './TacticsN.css';
 function Tactic6({players}) {
 
     return (
-        <div className="wrapper">
-            <div className="por font">{players[0]}</div>
-            <div className="def1 font">{players[1]}</div>
-            <div className="def5 font">{players[2]}</div>
-            <div className="med3 font">{players[3]}</div>
-            <div className="del1 font">{players[4]}</div>
-            <div className="del5 font">{players[5]}</div>
+        <div className="field">
+            <div className="box"><p className="font">{players[0]}</p></div>
+            <div className="box"><p className="font">{players[1]}</p><p className="font">{players[2]}</p></div>
+            <div className="box"><p className="font">{players[3]}</p></div>
+            <div className="box"><p className="font">{players[4]}</p><p className="font">{players[5]}</p></div>
         </div>
-     )
+    )
 
 }
 export default Tactic6;

@@ -1,20 +1,13 @@
 TASK
-
+    -asignar la parrilla a jugadores sobrantes (+23)
+    -crear el componente pechera para el output
+    -gestionar los errores (try...catch)
 
 STYLES
-    FLEXBOX AND BEM NOMENCLATURE
-    PALETA DE COLORES
-        #133954
-        #628290
-        #468902
-        #b1de00
-        #000000
+
 
 EVENT TOUCH
     DE INPUT A OUTPUT
-
-REACT REDUX (PARA FUTUROS RELEASES)
-
 
 BACKEND
     CONEXIÓN FRONT-BACK-BASE-SERVIDOR

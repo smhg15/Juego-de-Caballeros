@@ -1,14 +1,12 @@
 import React from "react";
 import './TacticsN.css';
 function Tactic5({players}) {
-
  return (
-    <div className="wrapper">
-        <div className="por font">{players[0]}</div>
-        <div className="def3 font">{players[1]}</div>
-        <div className="med2 font">{players[2]}</div>
-        <div className="med4 font">{players[3]}</div>
-        <div className="del3 font">{players[4]}</div>
+    <div className="field">
+        <div className="box"><p className="font">{players[0]}</p></div>
+        <div className="box"><p className="font">{players[1]}</p></div>
+        <div className="box"><p className="font">{players[2]}</p><p className="font">{players[3]}</p></div>
+        <div className="box"><p className="font">{players[4]}</p></div>
     </div>
  )
 }

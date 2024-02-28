@@ -8,7 +8,7 @@ function languages(){
 if (lang == 'spanish'){
     language={
         app:{
-            h1:'(Armá los equipos)',
+            h1:'(Armá tus equipos)',
         },
         malditoLunesAppForm:{
             incompleteTeamAlert:'Debe ingresar al menos 10 jugadores',
