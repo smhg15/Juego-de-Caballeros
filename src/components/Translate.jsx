@@ -20,18 +20,20 @@ import Box from '@mui/material/Box';
         },
       }}
     >
-      <ButtonGroup variant="contained" aria-label="Basic button group" color="error">
+      <ButtonGroup variant="contained" aria-label="Basic button group" color='error'>
         <Button
           title='Cordobés'
           aria-label="Cordobeceala"
           onClick={() => dispatch(translateToCordobez())}
+          sx={{backgroundColor:'#19191971'}}
         >
           Cor
         </Button>
         <Button
-        title='Español'
+          title='Español'
           aria-label="español"
           onClick={() => dispatch(translateToSpanish())}      
+          sx={{backgroundColor:'#19191971'}}
         >
           Es
         </Button>
@@ -39,6 +41,7 @@ import Box from '@mui/material/Box';
           title='English'
           aria-label="te-time"
           onClick={() => dispatch(translateToEnglish())}
+          sx={{backgroundColor:'#19191971'}}
         >
           En
         </Button>      

@@ -2,6 +2,8 @@ import React, { useState, useRef } from 'react';
 import './MalditoLunesAppForm.css'
 import OutputTeams from './outputTeams/OutputTeams';
 import languages from '../languages'
+import DeleteRoundedIcon from '@mui/icons-material/Delete';
+import { IconButton, colors } from '@mui/material';
 
 
 
@@ -110,7 +112,9 @@ function MalditoLunesAppForm() {
                             {index+1}- {player}
                         </td>
                         <td>
-                            <button className='section__button font' onClick={(e) => handleDeleteRow(e, index)}>Delete</button>
+                            <IconButton aria-label="delete" onClick={(e) => handleDeleteRow(e, index)}>
+                                <DeleteRoundedIcon sx={{color:'#191919'}}/>
+                            </IconButton>
                         </td>
                     </tr>
                     ))}
