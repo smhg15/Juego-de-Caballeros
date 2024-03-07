@@ -11,7 +11,6 @@
 
 .font{
     margin: 0;
-
 }
 .pechera{
     width: 13vw;
@@ -25,6 +24,8 @@
     left: 52%;
     transform: translate(-50%, -50%);
     color:#191919;
+    font-weight: bold;
+    letter-spacing: 0.08em;
 }
 .number{
     font-size: max(180%);
