@@ -1,9 +1,9 @@
 TASK
-    -crear el componente pechera para el output
+    -segundo color de pechera para el output
     -gestionar los errores (try...catch)
     -comenzar a migrar estilos a materialUI o a Glitch style (onlinetutorials_youtube)
-    -version de escritorio (width>= 800 px)
-        lista de esquipos
+    -version de escritorio (width>= 430 px)
+        lista de equipos
         sección tercer tiempo.
 STYLES
 

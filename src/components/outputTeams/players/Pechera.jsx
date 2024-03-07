@@ -1,5 +1,5 @@
 import React from "react";
-import './pechera.css';
+import './Pechera.css';
 import image from '../../../assets/pecheraSF.png';
 function Pechera({player, number}){
 
