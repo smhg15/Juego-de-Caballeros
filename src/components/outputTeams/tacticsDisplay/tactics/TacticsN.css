@@ -3,14 +3,14 @@
     flex-direction: column;
     height: 40vh;
     width: 90vw;
+    max-width: 430px;
     border: 5px solid rgb(50, 87, 56);
     border-radius: 2.5%;
     background-image: url(../../../../assets/mediumFieldBlur.png);
-    background-size:91vw 40vh;
-    background-position: center;
+    background-size:100% 100%;
+    background-position:top center;
     background-repeat: no-repeat;
 }
-
 .box{
     display: flex;
     height: 25%;
@@ -19,7 +19,6 @@
     flex-direction: row;
     justify-content: space-around;
 }
-
 .font{    
     font-size: 1em;
     font-family:fantasy, Impact, 'Arial Narrow Bold', sans-serif;

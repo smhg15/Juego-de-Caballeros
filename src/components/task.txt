@@ -1,8 +1,10 @@
 TASK
-    -asignar la parrilla a jugadores sobrantes (+23)
     -crear el componente pechera para el output
     -gestionar los errores (try...catch)
-
+    -comenzar a migrar estilos a materialUI o a Glitch style (onlinetutorials_youtube)
+    -version de escritorio (width>= 800 px)
+        lista de esquipos
+        sección tercer tiempo.
 STYLES
 
 

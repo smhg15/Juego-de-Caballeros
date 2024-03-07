@@ -6,3 +6,10 @@
     text-align: center;
     -webkit-text-stroke: 1px #191919;
 }
+
+.outputTeams{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

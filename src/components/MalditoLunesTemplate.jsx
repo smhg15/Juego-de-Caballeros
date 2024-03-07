@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import './MalditoLunesAppForm.css'
+import './MalditoLunesTemplate.css'
 import OutputTeams from './outputTeams/OutputTeams';
 import languages from '../languages'
 import DeleteRoundedIcon from '@mui/icons-material/Delete';
@@ -7,14 +7,14 @@ import { IconButton, colors } from '@mui/material';
 
 
 
-function MalditoLunesAppForm() {
+function MalditoLunesTemplate() {
     
-    const lang = languages().malditoLunesAppForm
+    const lang = languages().malditoLunesTemplate
     const [isShuffled, setIsShuffled]=useState(false)
     const [formAllPlayersInput, setFormAllPlayersInput]=useState(true)
     const [playersArray, setPlayersArray]=useState([]) //
     const [playersOneXOneArray, setPlayersOneXOneArray]=useState([])// Only for OneXOneInput
-    const ref= useRef(null)
+    const ref= useRef()
     
     function handleTextareaSubmit() {
 
@@ -37,7 +37,10 @@ function MalditoLunesAppForm() {
                 // Guarda la lista de jugadores en el estado playerArray
                 setPlayersArray(playersListArray)
                 setIsShuffled(true)
-                ref.current.scrollIntoView({behavior: "smooth", block: "start"})
+                setTimeout(() => {
+                    ref.current.scrollIntoView({behavior: "smooth", block: "start"})
+                  }, 100);
+                
             }
         }  
     }
@@ -49,7 +52,9 @@ function MalditoLunesAppForm() {
         else {
             setPlayersArray([...playersOneXOneArray])
             setIsShuffled(true)
-            ref.current.scrollIntoView({behavior: "smooth", block: "start"})
+            setTimeout(() => {
+                ref.current.scrollIntoView({behavior: "smooth", block: "start"})
+              }, 100);
         }
     }
 
@@ -140,4 +145,4 @@ function MalditoLunesAppForm() {
   )
 }
 
-export default MalditoLunesAppForm
+export default MalditoLunesTemplate

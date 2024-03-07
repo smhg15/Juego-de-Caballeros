@@ -1,13 +1,14 @@
 import React from "react";
 import './TacticsN.css';
+import Pechera from "../../players/Pechera";
 function Tactic10({players}) {
 
     return (
         <div className="field">
-            <div className="box"><p className="font">{players[0]}</p></div>
-            <div className="box"><p className="font">{players[1]}</p><p className="font">{players[2]}</p><p className="font">{players[3]}</p><p className="font">{players[4]}</p></div>
-            <div className="box"><p className="font">{players[5]}</p><p className="font">{players[6]}</p><p className="font">{players[7]}</p></div>
-            <div className="box"><p className="font">{players[8]}</p><p className="font">{players[9]}</p></div>
+            <div className="box"><Pechera player={players[0]} number={1}/></div>
+            <div className="box"><Pechera player={players[1]} number={3}/><Pechera player={players[2]} number={2}/><Pechera player={players[3]} number={6}/><Pechera player={players[4]} number={4}/></div>
+            <div className="box"><Pechera player={players[5]} number={8}/><Pechera player={players[6]} number={5}/><Pechera player={players[7]} number={10}/></div>
+            <div className="box"><Pechera player={players[8]} number={7}/><Pechera player={players[9]} number={9}/></div>
         </div>
     )
 

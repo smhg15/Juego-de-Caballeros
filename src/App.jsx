@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-import MalditoLunesAppForm from './components/MalditoLunesAppForm'
+import MalditoLunesTemplate from './components/MalditoLunesTemplate'
 import Translate from './components/Translate'
 import languages from './languages'
 
@@ -11,7 +11,7 @@ function App() {
     <div className='app'>
       <Translate/>
       <h1 className='app__title'>Juego de Caballeros<br/>{lang.h1}</h1>
-      <MalditoLunesAppForm/>
+      <MalditoLunesTemplate/>
       <footer className='app__footer'>#FreePlayerCodefy</footer>
     </div>
   )

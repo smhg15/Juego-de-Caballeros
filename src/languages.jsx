@@ -8,9 +8,9 @@ function languages(){
 if (lang == 'spanish'){
     language={
         app:{
-            h1:'(Armá tus equipos)',
+            h1:'(Arma tus equipos)',
         },
-        malditoLunesAppForm:{
+        malditoLunesTemplate:{
             incompleteTeamAlert:'Debe ingresar al menos 10 jugadores',
             textareaAlertDuplicated:'Ha ingresado dos jugadores con el mismo nombre.',
             oneXOneInputAlertDuplicated:'Ya ha ingresado a ese jugador',
@@ -26,7 +26,7 @@ if (lang == 'spanish'){
             }
         },
         tacticsDisplay:{
-            defaultAlert:'quedará como suplente'
+            defaultAlert:'Suplentes: '
         }
     }
 }
@@ -35,7 +35,7 @@ else if (lang == 'cordobés'){
         app:{
             h1:'(Pan y queso)',
         },
-        malditoLunesAppForm:{
+        malditoLunesTemplate:{
             incompleteTeamAlert:'que queré inventá!?, cómo va a jugar con menos de 10!?!?',
             textareaAlertDuplicated:'hay un gil que está anotado dos veces, mínimo...',
             oneXOneInputAlertDuplicated:'Hermano, lo acabá de anotá a ese!!. ¿Queré que te consiga uno?',
@@ -51,7 +51,7 @@ else if (lang == 'cordobés'){
             }
         },
         tacticsDisplay:{
-            defaultAlert:'hace el asado'
+            defaultAlert:'Asadores: '
         }
     }
 }
@@ -60,7 +60,7 @@ else {
         app:{
             h1:'(Team Maker)',
         },
-        malditoLunesAppForm:{
+        malditoLunesTemplate:{
             incompleteTeamAlert:'The players list must contain at least 10 players',
             textareaAlertDuplicated:'There are at least two players with the same name.',
             oneXOneInputAlertDuplicated:'This player has already been added to the list.',
@@ -76,7 +76,7 @@ else {
             }
         },
         tacticsDisplay:{
-            defaultAlert:'will remain as a substitute'
+            defaultAlert:'Subtitutes: '
         }
     }
 }
