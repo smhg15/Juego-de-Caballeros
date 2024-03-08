@@ -5,8 +5,6 @@ import languages from '../languages'
 import DeleteRoundedIcon from '@mui/icons-material/Delete';
 import { IconButton, colors } from '@mui/material';
 
-
-
 function MalditoLunesTemplate() {
     
     const lang = languages().malditoLunesTemplate
@@ -15,13 +13,19 @@ function MalditoLunesTemplate() {
     const [playersArray, setPlayersArray]=useState([]) //
     const [playersOneXOneArray, setPlayersOneXOneArray]=useState([])// Only for OneXOneInput
     const ref= useRef()
+    const oneXoneInput=useRef()
+    const textareaInput=useRef()
     
+    function handleKey(){
+        textareaInput.current.value = textareaInput.current.value.toUpperCase()
+    }
+
     function handleTextareaSubmit() {
 
     
-        const formJson_teamList = document.getElementById('teamList').value
+        const formJson_teamList = textareaInput.current.value
         if (formJson_teamList != '') {
-            let playersListArray= formJson_teamList.replaceAll(',',';').split('\n')// array de elementos a partir de un bloque de texto. 1ª TRANSFORMACIÓN: eliminación de ',' y renglones vacíos
+            let playersListArray= formJson_teamList.replaceAll(',',';').split('\n')// array de elementos a partir de un bloque de texto. 1ª TRANSFORMACIÓN: conversión a mayúsculas, eliminación de ',' y renglones vacíos
             
             // 2ª TRANSFORMACIÓN: quita los espacios en blanco y renglones que no incluyan al menos una letra o número
             playersListArray = playersListArray.filter(player => player.match('[a-zA-Z0-9]+'));
@@ -66,10 +70,12 @@ function MalditoLunesTemplate() {
     }
 
     function handleEnterKey(event){
+
+        oneXoneInput.current.value = oneXoneInput.current.value.toUpperCase()
+
         if (event.key === 'Enter') {
             event.preventDefault()
-        if (event.target.value!='' && event.target.value.match('[a-zA-Z0-9\u00f1\u00d1]+')) {
-
+        if (event.target.value!='' && event.target.value.match('[A-Z0-9\u00d1]+')) {
             if (playersOneXOneArray.includes(event.target.value)==false){
                 setPlayersOneXOneArray([...playersOneXOneArray, event.target.value]);
                 event.target.value=''//sirve para limpiar el input
@@ -104,7 +110,8 @@ function MalditoLunesTemplate() {
         ?
         <textarea 
             placeholder={lang.textareaPlaceholder}
-            id="teamList"
+            onKeyUp={(e) => handleKey(e)}
+            ref={textareaInput}
             className='section__textarea font' 
         />
         :
@@ -126,9 +133,10 @@ function MalditoLunesTemplate() {
             </table>
             <input
             type="text"
-            onKeyDown={(e) => handleEnterKey(e)}
+            onKeyUp={(e) => handleEnterKey(e)}
             maxLength='25'
             className='article__input'
+            ref={oneXoneInput}
             /> 
         </article>
         }
