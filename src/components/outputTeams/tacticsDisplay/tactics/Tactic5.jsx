@@ -2,6 +2,7 @@ import React from "react";
 import './TacticsN.css';
 import Pechera from "../../players/Pechera";
 function Tactic5({players}) {
+    
  return (
     <div className="field">
         <div className="box"><Pechera player={players[0]} number={1}/></div>

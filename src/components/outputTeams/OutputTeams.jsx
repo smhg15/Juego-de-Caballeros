@@ -12,7 +12,7 @@ function OutputTeams({playersProp}){
     const lang= languages().tacticsDisplay
 
     const playersArray= playersProp
-    let counterPlayer= 0 // contador para enumerar y distribuir los jugadores
+    let counterPlayer= 10 // contador para enumerar y distribuir los jugadores
     const team1=[] // equipo aleatorio 1 
     const team2=[] // equipo aleatorio 2
     const asadores=[]
@@ -25,9 +25,11 @@ function OutputTeams({playersProp}){
         counterPlayer= counterPlayer+1
 
         if (counterPlayer%2 === 1 && counterPlayer<23) // divide los jugadores entre pares, impares y asadores
-            team1.push(player)
+            {player= counterPlayer + player
+            team1.push(player)}
         else if (counterPlayer%2 === 0 && counterPlayer<23)
-            team2.push(player)
+            {player= counterPlayer + player
+            team2.push(player)}
         else
             asadores.push(player)
     }

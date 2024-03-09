@@ -9,7 +9,7 @@ import Tactic11 from './tactics/Tactic11.jsx'
 
 
 function TacticsDisplay({team}){
-    
+
     let tactic = <></>
 
     switch(true){

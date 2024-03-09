@@ -3,7 +3,7 @@ import './MalditoLunesTemplate.css'
 import OutputTeams from './outputTeams/OutputTeams';
 import languages from '../languages'
 import DeleteRoundedIcon from '@mui/icons-material/Delete';
-import { IconButton, colors } from '@mui/material';
+import { IconButton } from '@mui/material';
 
 function MalditoLunesTemplate() {
     
