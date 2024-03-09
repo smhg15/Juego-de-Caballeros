@@ -4,7 +4,7 @@ TASK
     -comenzar a migrar estilos a materialUI o a Glitch style (onlinetutorials_youtube)
     -version de escritorio (width>= 430 px)
         lista de equipos
-        sección tercer tiempo.
+        sección tercer tiempo (asadores)
 STYLES
 
 

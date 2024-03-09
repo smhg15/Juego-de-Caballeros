@@ -21,8 +21,8 @@ if (lang == 'spanish'){
             textareaPlaceholder:'Copia y pega la lista de jugadores (cada renglón corresponde a 1 jugador).\n\n\nEjemplo:\n\nJugador 1\nJugador 2\nJugador 3\nJugador 4\nJugador 5\nJugador 6\nJugador 7\nJugador 8\nJugador 9\nJugador 10',
             oneXOneInputTableHead:'Ingrese el nombre y presione "Enter"(debe contener al menos una letra o número)',
             makeTeamButton:{
-                isShuffled:'Mezclar nuevamente',
-                isNotShuffled:'Armar equipos',
+                isShuffled:'MEZCLAR NUEVAMENTE',
+                isNotShuffled:'ARMAR EQUIPOS',
             }
         },
         tacticsDisplay:{
@@ -46,8 +46,8 @@ else if (lang == 'cordobés'){
             textareaPlaceholder:'Copiá y pegá la lista de la banda, así como viene del Wasap (meté un player X renglón).\n\n\nTe tiene que quedá así:\n\nPrimero La Mona\nSegundo Francia\nRomán\nCachumba (que es como el doble de riesgo de La Mona)\nEsquiareti\nEl Guapachoso\nZlatan Ibrahimović\nEl gorrita\nEl que se pone la gorra\nEl gorriao',
             oneXOneInputTableHead:'Escribí el nombre y tocá el "Enter" (poné algo que se pueda pronunciá)',
             makeTeamButton:{
-                isShuffled:'Da ocote el team: armar otro',
-                isNotShuffled:'Armemo los equipos',
+                isShuffled:'DA OCOTE EL TEAM: LO ARMEMO DE NUEVO',
+                isNotShuffled:'ARMEMO LOS EQUIPO',
             }
         },
         tacticsDisplay:{
@@ -71,8 +71,8 @@ else {
             textareaPlaceholder: 'Copy and paste your players listname (each line is one player).\n\n\nExample:\n\nPlayer 1\nPlayer 2\nPlayer 3\nPlayer 4\nPlayer 5\nPlayer 6\nPlayer 7\nPlayer 8\nPlayer 9\nPlayer 10',
             oneXOneInputTableHead:'Insert a player name and press "Enter" ( the name must contain at least one letter or number)',
             makeTeamButton:{
-                isShuffled:'Suffle again',
-                isNotShuffled:'Make teams',
+                isShuffled:'SHUFFLE AGAIN',
+                isNotShuffled:'MAKE TEAMS',
             }
         },
         tacticsDisplay:{
