@@ -24,10 +24,10 @@ function OutputTeams({playersProp}){
     for (let player of playersArray) {
         counterPlayer= counterPlayer+1
 
-        if (counterPlayer%2 === 1 && counterPlayer<23) // divide los jugadores entre pares, impares y asadores
+        if (counterPlayer%2 === 1 && counterPlayer<33) // divide los jugadores entre pares, impares y asadores
             {player= counterPlayer + player
             team1.push(player)}
-        else if (counterPlayer%2 === 0 && counterPlayer<23)
+        else if (counterPlayer%2 === 0 && counterPlayer<33)
             {player= counterPlayer + player
             team2.push(player)}
         else

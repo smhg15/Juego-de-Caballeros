@@ -19,7 +19,10 @@ function MalditoLunesTemplate() {
     function handleKey(){
         textareaInput.current.value = textareaInput.current.value.toUpperCase()
     }
-
+    function obtenerName(player) {
+        let playerName = player.match(/[a-zA-Z].*/);
+        return playerName ? playerName[0] : '';
+      }
     function handleTextareaSubmit() {
 
     
@@ -28,12 +31,14 @@ function MalditoLunesTemplate() {
             let playersListArray= formJson_teamList.replaceAll(',',';').split('\n')// array de elementos a partir de un bloque de texto. 1ª TRANSFORMACIÓN: conversión a mayúsculas, eliminación de ',' y renglones vacíos
             
             // 2ª TRANSFORMACIÓN: quita los espacios en blanco y renglones que no incluyan al menos una letra o número
-            playersListArray = playersListArray.filter(player => player.match('[a-zA-Z0-9]+'));
+            playersListArray = playersListArray.filter(player => player.match('[a-zA-Z]+'))
+
+            const controlDuplicates = playersListArray.map(player => obtenerName(player))
             const hasDuplicates = array => new Set(array).size < array.length
             if (playersListArray.length <10) {
                 alert(lang.incompleteTeamAlert)
             }
-            else if (hasDuplicates(playersListArray) == true) {
+            else if (hasDuplicates(controlDuplicates) == true) {
                 alert(lang.textareaAlertDuplicated)
             }
                 
