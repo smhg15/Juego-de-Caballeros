@@ -1,5 +1,5 @@
 TASK
-    -segundo color de pechera para el output
+    -colocar instrucciones en el OneXOneInput
     -gestionar los errores (try...catch)
     -comenzar a migrar estilos a materialUI o a Glitch style (onlinetutorials_youtube)
     -version de escritorio (width>= 430 px)

@@ -33,6 +33,7 @@ function MalditoLunesTemplate() {
             // 2ª TRANSFORMACIÓN: quita los espacios en blanco y renglones que no incluyan al menos una letra o número
             playersListArray = playersListArray.filter(player => player.match('[a-zA-Z]+'))
 
+            //Control de jugadores duplicados
             const controlDuplicates = playersListArray.map(player => obtenerName(player))
             const hasDuplicates = array => new Set(array).size < array.length
             if (playersListArray.length <10) {
@@ -76,6 +77,16 @@ function MalditoLunesTemplate() {
 
     function handleEnterKey(event){
 
+        //Controla que el primer caracter coincida con una letra
+        let controlFirstCharacter = false
+        if (controlFirstCharacter === false && event.target.value.match('[a-zA-Z\u00f1\u00d1]+')){
+            controlFirstCharacter = true
+        }
+        else {
+            alert(lang.checkFirstCharacter)
+            oneXoneInput.current.value = ''
+        }
+        //
         oneXoneInput.current.value = oneXoneInput.current.value.toUpperCase()
 
         if (event.key === 'Enter') {
@@ -86,6 +97,7 @@ function MalditoLunesTemplate() {
                 event.target.value=''//sirve para limpiar el input
                 setPlayersArray([])//sirve para limpiar el outputTeam mientras se cargan nuevos jugadores
                 setIsShuffled(false)
+                controlFirstCharacter = false
             }
             else {
                 alert(lang.oneXOneInputAlertDuplicated)
