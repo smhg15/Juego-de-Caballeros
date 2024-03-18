@@ -1,37 +1,7 @@
 TASK
-    -colocar instrucciones en el OneXOneInput
     -gestionar los errores (try...catch)
     -comenzar a migrar estilos a materialUI o a Glitch style (onlinetutorials_youtube)
     -version de escritorio (width>= 430 px)
         lista de equipos
         sección tercer tiempo (asadores)
 STYLES
-
-
-EVENT TOUCH
-    DE INPUT A OUTPUT
-
-BACKEND
-    CONEXIÓN FRONT-BACK-BASE-SERVIDOR
-
-
-ACCES-KEYS
-"Alt Gr" + "z": controla el salto de línea (visualmente). SOlo en ESP- US
-
-
-TESTING INPUT:
-
-colibri
-lucho
-fer
-Manu
-Nelson,
-Pulp,o
-Brian
-Santi Torres
-  
-Mati
-,
-Chaco
-Mariano
-

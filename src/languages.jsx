@@ -71,7 +71,7 @@ else {
                 toOneXOneInput:'PRESS TO INSERT PLAYERS ONE X ONE',
                 toListForm:'PRESS TO INSERT PLAYERS LIST'
             },
-            textareaPlaceholder: 'Copy and paste your players listname (each line is one player).\n\n\nATENTION: if you have two players with the same name, add any character at the end of one of them\n\n\nExample:\n\nPlayer 1\nPlayer 2\nPlayer 3\nPlayer 4\nPlayer 5\nPlayer 6\nPlayer 7\nPlayer 8\nPlayer 9\nPlayer 10',
+            textareaPlaceholder: 'Copy and paste your players listname (each line is one player).\n\n\nATTENTION: if you have two players with the same name, add any character at the end of one of them; the app understands that "1Jhon" and "32Jhon" is the same player\n\n\nExample:\n\nPlayer 1\nPlayer 2\nPlayer 3\nPlayer 4\nPlayer 5\nPlayer 6\nPlayer 7\nPlayer 8\nPlayer 9\nPlayer 10',
             oneXOneInputTableHead:'Insert a player name and press "Enter" (the name must contain at least one letter or number)',
             makeTeamButton:{
                 isShuffled:'SHUFFLE AGAIN',

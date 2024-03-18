@@ -10,8 +10,8 @@ function MalditoLunesTemplate() {
     const lang = languages().malditoLunesTemplate
     const [isShuffled, setIsShuffled]=useState(false)
     const [formAllPlayersInput, setFormAllPlayersInput]=useState(true)
-    const [playersArray, setPlayersArray]=useState([]) //
-    const [playersOneXOneArray, setPlayersOneXOneArray]=useState([])// Only for OneXOneInput
+    const [playersArray, setPlayersArray]=useState([]) 
+    const [playersOneXOneArray, setPlayersOneXOneArray]=useState([])
     const ref= useRef()
     const oneXoneInput=useRef()
     const textareaInput=useRef()
@@ -28,9 +28,7 @@ function MalditoLunesTemplate() {
     
         const formJson_teamList = textareaInput.current.value
         if (formJson_teamList != '') {
-            let playersListArray= formJson_teamList.replaceAll(',',';').split('\n')// array de elementos a partir de un bloque de texto. 1ª TRANSFORMACIÓN: conversión a mayúsculas, eliminación de ',' y renglones vacíos
-            
-            // 2ª TRANSFORMACIÓN: quita los espacios en blanco y renglones que no incluyan al menos una letra o número
+            let playersListArray= formJson_teamList.replaceAll(',',';').split('\n')
             playersListArray = playersListArray.filter(player => player.match('[a-zA-Z]+'))
 
             //Control de jugadores duplicados
@@ -44,7 +42,6 @@ function MalditoLunesTemplate() {
             }
                 
             else {            
-                // Guarda la lista de jugadores en el estado playerArray
                 setPlayersArray(playersListArray)
                 setIsShuffled(true)
                 setTimeout(() => {
@@ -94,8 +91,8 @@ function MalditoLunesTemplate() {
         if (event.target.value!='' && event.target.value.match('[A-Z0-9\u00d1]+')) {
             if (playersOneXOneArray.includes(event.target.value)==false){
                 setPlayersOneXOneArray([...playersOneXOneArray, event.target.value]);
-                event.target.value=''//sirve para limpiar el input
-                setPlayersArray([])//sirve para limpiar el outputTeam mientras se cargan nuevos jugadores
+                event.target.value=''
+                setPlayersArray([])
                 setIsShuffled(false)
                 controlFirstCharacter = false
             }
@@ -165,7 +162,7 @@ function MalditoLunesTemplate() {
         >
           {isShuffled? lang.makeTeamButton.isShuffled:lang.makeTeamButton.isNotShuffled}
         </button>    
-    <OutputTeams playersProp={playersArray}/>{/*se envía un array*/}
+    <OutputTeams playersProp={playersArray}/>
     </section>
   )
 }

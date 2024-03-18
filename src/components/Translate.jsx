@@ -1,12 +1,11 @@
 import React from 'react'
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { translateToCordobez, translateToEnglish, translateToSpanish } from '../store/stateSlice'
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import Box from '@mui/material/Box';
 
  function Translate() {
-  const lang = useSelector((state) => state.language.value)
   const dispatch = useDispatch()
 
   return (
